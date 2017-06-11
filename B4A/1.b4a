@@ -1,0 +1,122 @@
+﻿Version=7
+NumberOfModules=1
+Module1=Starter
+Build1=Default,b4a.example.arcloader
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: http://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="19"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~
+IconFile=
+NumberOfFiles=0
+NumberOfLibraries=2
+Library1=core
+Library2=jssimplearcloader
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: JSSimpleArcLoader
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	'These variables can only be accessed from this module.
+
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	'Do not forget to load the layout file created with the visual designer. For example:
+	'Activity.LoadLayout("Layout1")
+
+	Dim size As Int = Activity.Width / 2 - 15%x / 2
+	Dim left As Int = 5%x
+	Dim top As Int = 10%y
+	
+	'-----------
+	Dim arc1 As JSSimpleArcLoader	
+	arc1.Initialize
+	Activity.AddView(arc1, left, top, size, size)
+
+	'-----------
+	left = arc1.Left + arc1.Width + 5%x	
+	Dim arc2 As JSSimpleArcLoader
+	arc2.Initialize	
+	
+	Dim config As JSArcConfiguration
+	config.Initialize
+	config.setLoaderStyle(config.STYLE_COMPLETE_ARC)
+	arc2.refreshArcLoaderDrawable(config)
+	Activity.AddView(arc2, left, top, size, size)
+	
+	'-----------
+	top = arc2.Top + arc2.Height + 5%x
+	left = 5%x	
+	Dim arc3 As JSSimpleArcLoader
+	arc3.Initialize
+	
+	Dim config As JSArcConfiguration
+	config.Initialize
+	config.setLoaderStyle(config.STYLE_SIMPLE_ARC) _
+		.setColors(Array As Int(0xFFE91E63))
+	arc3.refreshArcLoaderDrawable(config)
+	Activity.AddView(arc3, left, top, size, size)
+	
+	'-----------
+	left = arc3.Left + arc3.Width + 5%x	
+	Dim arc4 As JSSimpleArcLoader
+	arc4.Initialize	
+	
+	Dim config As JSArcConfiguration
+	config.Initialize
+	config.setLoaderStyle(config.STYLE_COMPLETE_ARC) _
+		.setColors(Array As Int(0xFFE91E63, 0xFF3F51B5, 0xFF9C27B0))
+	arc4.refreshArcLoaderDrawable(config)
+	Activity.AddView(arc4, left, top, size, size)
+	
+	'----------
+	top = arc4.Top + arc4.Height + 10dip
+	Dim btnShowDialog As Button
+	btnShowDialog.Initialize("btnShowDialog")
+	Activity.AddView(btnShowDialog, 20dip, top, 100%x - 40dip, 56dip)
+	btnShowDialog.Text = "Show ArcDialog"
+	
+End Sub
+
+Sub Activity_Resume
+	
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+Sub btnShowDialog_Click
+	Try
+		Dim config As JSArcConfiguration
+		config.Initialize
+		config.setLoaderStyle(config.STYLE_COMPLETE_ARC) _
+			.setColors(Array As Int(0xFFE91E63, 0xFF3F51B5, 0xFF9C27B0, 0xFFFFC107, 0xFFF44336, 0xFF4CAF50, 0xFF03A9F4)) _
+			.setText("Loading..Please wait...")
+			
+		Dim dlg As JSSimpleArcDialog
+		dlg.Initialize2("dlg", config)
+		dlg.Show2(config, True)				
+	Catch
+		Log(LastException)
+	End Try
+End Sub
+
+Sub dlg_OnDismiss
+	ToastMessageShow("dismiss", False)
+End Sub

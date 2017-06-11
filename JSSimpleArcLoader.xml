@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>com.salvadorjhai.widgets.JSSimpleArcLoader</name>
+        <shortname>JSSimpleArcLoader</shortname>
+        <comment>Wrapped Of: https://github.com/generic-leo/SimpleArcLoader 
+ Credits to: Prathamesh Sawant (prathamesh.s1989@gmail.com)
+ 
+ Usage 1:&lt;code&gt;
+ 'create, initialize and add JSSimpleArcLoader on your activity
+ Dim arc1 As JSSimpleArcLoader
+ arc1.Initialize
+ Activity.AddView(arc1, left, top, width, height)
+ 
+ 'you can also set custom configuration
+ Dim config As JSArcConfiguration
+ config.Initialize
+ config.LoaderStyle = config.STYLE_COMPLETE_ARC	
+ config.Colors = Array As Int(0xFFE91E63, 0xFF3F51B5, 0xFF9C27B0)
+ arc1.refreshArcLoaderDrawable(config)
+ &lt;/code&gt;
+ 
+ Usage 2:&lt;code&gt;
+ Use Custom Designer and drag JSSimpleArcLoader on your layout.
+ &lt;/code&gt;</comment>
+        <objectwrapper>com.leo.simplearcloader.SimpleArcLoader</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>Start</name>
+            <comment>Start ArcLoader animation.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RequestFocus</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetBackgroundImage</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Stop</name>
+            <comment>Stop ArcLoader animation.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsRunning</name>
+            <comment>Checks if ArcLoader is running.
+Return type: @return:true, if successful</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Invalidate3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetLayout</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DesignerCreateView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>paramPanelWrapper</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>paramLabelWrapper</name>
+                <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>paramMap</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetColorAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetLayoutAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg4</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetVisibleAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>refreshArcLoaderDrawable</name>
+            <comment>Refresh ArcLoader configuration.
+configuration: JSArcConfiguration</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>configuration</name>
+                <type>com.salvadorjhai.widgets.JSArcConfiguration</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Parent</name>
+            <returntype>java.lang.Object</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Background</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>com.salvadorjhai.widgets.JSSimpleArcDialog</name>
+        <shortname>JSSimpleArcDialog</shortname>
+        <comment>Wrapped Of: https://github.com/generic-leo/SimpleArcLoader Credits to:
+ Prathamesh Sawant (prathamesh.s1989@gmail.com)
+ 
+ Usage:&lt;code&gt;
+ 'create configuration (optional)
+ Dim config As JSArcConfiguration
+ config.Initialize
+ config.LoaderStyle = config.STYLE_COMPLETE_ARC	
+ config.Colors = Array As Int(0xFFE91E63, 0xFF3F51B5, 0xFF9C27B0, 0xFFFFC107, 0xFFF44336, 0xFF4CAF50, 0xFF03A9F4)
+ config.Text = "Loading..Please wait..."
+ 
+ 'create, initialize JSSimpleArcDialog, call .Show method.
+ Dim dlg As JSSimpleArcDialog
+ dlg.Initialize("dlg")
+ dlg.Show2(config, True)			
+ &lt;/code&gt;</comment>
+        <objectwrapper>com.leo.simplearcloader.SimpleArcDialog</objectwrapper>
+        <owner>activity</owner>
+        <event>OnDismiss</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize JSSimpleArcDialog
+ba: 
+eventName: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Show</name>
+            <comment>Show JSSimpleArcDialog with default configuration</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Cancelable</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Dismiss</name>
+            <comment>Dismiss ArcDialog</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsShowing</name>
+            <comment>Check if dialog is showing
+Return type: @return:IsShowing</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Show2</name>
+            <comment>Show JSSimpleArcDialog with custom configuration
+config: JSArcConfiguration
+Cancelable: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>config</name>
+                <type>com.salvadorjhai.widgets.JSArcConfiguration</type>
+            </parameter>
+            <parameter>
+                <name>Cancelable</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Initialize JSSimpleArcDialog
+ba: 
+eventName: event name
+config: JSArcConfiguration</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>config</name>
+                <type>com.salvadorjhai.widgets.JSArcConfiguration</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+    </class>
+    <class>
+        <name>com.salvadorjhai.widgets.JSArcConfiguration</name>
+        <shortname>JSArcConfiguration</shortname>
+        <objectwrapper>com.leo.simplearcloader.ArcConfiguration</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setTypeFace</name>
+            <comment></comment>
+            <returntype>com.salvadorjhai.widgets.JSArcConfiguration</returntype>
+            <parameter>
+                <name>typeFace</name>
+                <type>android.graphics.Typeface</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setColors</name>
+            <comment></comment>
+            <returntype>com.salvadorjhai.widgets.JSArcConfiguration</returntype>
+            <parameter>
+                <name>colors</name>
+                <type>int[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setText</name>
+            <comment></comment>
+            <returntype>com.salvadorjhai.widgets.JSArcConfiguration</returntype>
+            <parameter>
+                <name>mText</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setArcMargin</name>
+            <comment></comment>
+            <returntype>com.salvadorjhai.widgets.JSArcConfiguration</returntype>
+            <parameter>
+                <name>mArcMargin</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAnimationSpeedWithIndex</name>
+            <comment></comment>
+            <returntype>com.salvadorjhai.widgets.JSArcConfiguration</returntype>
+            <parameter>
+                <name>mAnimationIndex</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setTextSize</name>
+            <comment></comment>
+            <returntype>com.salvadorjhai.widgets.JSArcConfiguration</returntype>
+            <parameter>
+                <name>size</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setArcWidthInPixel</name>
+            <comment></comment>
+            <returntype>com.salvadorjhai.widgets.JSArcConfiguration</returntype>
+            <parameter>
+                <name>mStrokeWidth</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setLoaderStyle</name>
+            <comment></comment>
+            <returntype>com.salvadorjhai.widgets.JSArcConfiguration</returntype>
+            <parameter>
+                <name>mLoaderStyle</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setTextColor</name>
+            <comment></comment>
+            <returntype>com.salvadorjhai.widgets.JSArcConfiguration</returntype>
+            <parameter>
+                <name>mTextColor</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAnimationSpeed</name>
+            <comment></comment>
+            <returntype>com.salvadorjhai.widgets.JSArcConfiguration</returntype>
+            <parameter>
+                <name>mAnimationSpeed</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <field>
+            <name>STYLE_COMPLETE_ARC</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>STYLE_SIMPLE_ARC</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>1.0</version>
+    <author>salvadorjhai</author>
+    <dependsOn>JSSimpleArcLoader.aar</dependsOn>
+</root>
