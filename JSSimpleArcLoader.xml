@@ -332,11 +332,23 @@ configuration: JSArcConfiguration</comment>
         <owner>activity</owner>
         <event>OnDismiss</event>
         <method>
+            <name>setConfiguration</name>
+            <comment>Sets the configuration.
+config: the config
+Return type: @return:the JS simple arc dialog</comment>
+            <returntype>com.salvadorjhai.widgets.JSSimpleArcDialog</returntype>
+            <parameter>
+                <name>config</name>
+                <type>com.salvadorjhai.widgets.JSArcConfiguration</type>
+            </parameter>
+        </method>
+        <method>
             <name>Initialize</name>
-            <comment>Initialize JSSimpleArcDialog
-ba: 
-eventName: </comment>
-            <returntype>void</returntype>
+            <comment>Initialize JSSimpleArcDialog.
+ba: the ba
+eventName: the event name
+Return type: @return:the JS simple arc dialog</comment>
+            <returntype>com.salvadorjhai.widgets.JSSimpleArcDialog</returntype>
             <parameter>
                 <name>ba</name>
                 <type>anywheresoftware.b4a.BA</type>
@@ -348,34 +360,25 @@ eventName: </comment>
         </method>
         <method>
             <name>Show</name>
-            <comment>Show JSSimpleArcDialog with default configuration</comment>
+            <comment>Show JSSimpleArcDialog with default configuration.</comment>
             <returntype>void</returntype>
-            <parameter>
-                <name>Cancelable</name>
-                <type>boolean</type>
-            </parameter>
         </method>
         <method>
             <name>Dismiss</name>
-            <comment>Dismiss ArcDialog</comment>
+            <comment>Dismiss ArcDialog.</comment>
             <returntype>void</returntype>
         </method>
         <method>
             <name>IsShowing</name>
-            <comment>Check if dialog is showing
+            <comment>Check if dialog is showing.
 Return type: @return:IsShowing</comment>
             <returntype>boolean</returntype>
         </method>
         <method>
             <name>Show2</name>
-            <comment>Show JSSimpleArcDialog with custom configuration
-config: JSArcConfiguration
-Cancelable: </comment>
+            <comment>Show JSSimpleArcDialog with default configuration.
+Cancelable: the cancelable</comment>
             <returntype>void</returntype>
-            <parameter>
-                <name>config</name>
-                <type>com.salvadorjhai.widgets.JSArcConfiguration</type>
-            </parameter>
             <parameter>
                 <name>Cancelable</name>
                 <type>boolean</type>
@@ -383,11 +386,12 @@ Cancelable: </comment>
         </method>
         <method>
             <name>Initialize2</name>
-            <comment>Initialize JSSimpleArcDialog
-ba: 
+            <comment>Initialize JSSimpleArcDialog.
+ba: the ba
 eventName: event name
-config: JSArcConfiguration</comment>
-            <returntype>void</returntype>
+config: JSArcConfiguration
+Return type: @return:the JS simple arc dialog</comment>
+            <returntype>com.salvadorjhai.widgets.JSSimpleArcDialog</returntype>
             <parameter>
                 <name>ba</name>
                 <type>anywheresoftware.b4a.BA</type>
@@ -406,16 +410,33 @@ config: JSArcConfiguration</comment>
             <comment></comment>
             <returntype>boolean</returntype>
         </method>
+        <method>
+            <name>Show3</name>
+            <comment>Show JSSimpleArcDialog with custom configuration.
+config: JSArcConfiguration
+Cancelable: the cancelable</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>config</name>
+                <type>com.salvadorjhai.widgets.JSArcConfiguration</type>
+            </parameter>
+            <parameter>
+                <name>Cancelable</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
     </class>
     <class>
         <name>com.salvadorjhai.widgets.JSArcConfiguration</name>
         <shortname>JSArcConfiguration</shortname>
+        <comment>The Class JSArcConfiguration.</comment>
         <objectwrapper>com.leo.simplearcloader.ArcConfiguration</objectwrapper>
         <owner>process</owner>
         <method>
             <name>Initialize</name>
-            <comment></comment>
-            <returntype>void</returntype>
+            <comment>Initialize.
+ba: the ba</comment>
+            <returntype>com.salvadorjhai.widgets.JSArcConfiguration</returntype>
             <parameter>
                 <name>ba</name>
                 <type>anywheresoftware.b4a.BA</type>
@@ -423,7 +444,9 @@ config: JSArcConfiguration</comment>
         </method>
         <method>
             <name>setTypeFace</name>
-            <comment></comment>
+            <comment>Sets the type face.
+typeFace: the type face
+Return type: @return:the JS arc configuration</comment>
             <returntype>com.salvadorjhai.widgets.JSArcConfiguration</returntype>
             <parameter>
                 <name>typeFace</name>
@@ -432,7 +455,9 @@ config: JSArcConfiguration</comment>
         </method>
         <method>
             <name>setColors</name>
-            <comment></comment>
+            <comment>Sets the colors.
+colors: the colors.
+Return type: @return:the JS arc configuration</comment>
             <returntype>com.salvadorjhai.widgets.JSArcConfiguration</returntype>
             <parameter>
                 <name>colors</name>
@@ -441,7 +466,9 @@ config: JSArcConfiguration</comment>
         </method>
         <method>
             <name>setText</name>
-            <comment></comment>
+            <comment>Sets the text.
+mText: the m text
+Return type: @return:the JS arc configuration</comment>
             <returntype>com.salvadorjhai.widgets.JSArcConfiguration</returntype>
             <parameter>
                 <name>mText</name>
@@ -450,7 +477,9 @@ config: JSArcConfiguration</comment>
         </method>
         <method>
             <name>setArcMargin</name>
-            <comment></comment>
+            <comment>Sets the arc margin.
+mArcMargin: the m arc margin
+Return type: @return:the JS arc configuration</comment>
             <returntype>com.salvadorjhai.widgets.JSArcConfiguration</returntype>
             <parameter>
                 <name>mArcMargin</name>
@@ -459,7 +488,9 @@ config: JSArcConfiguration</comment>
         </method>
         <method>
             <name>setAnimationSpeedWithIndex</name>
-            <comment></comment>
+            <comment>Sets the animation speed with index.
+mAnimationIndex: the m animation index
+Return type: @return:the JS arc configuration</comment>
             <returntype>com.salvadorjhai.widgets.JSArcConfiguration</returntype>
             <parameter>
                 <name>mAnimationIndex</name>
@@ -468,7 +499,9 @@ config: JSArcConfiguration</comment>
         </method>
         <method>
             <name>setTextSize</name>
-            <comment></comment>
+            <comment>Sets the text size.
+size: the size
+Return type: @return:the JS arc configuration</comment>
             <returntype>com.salvadorjhai.widgets.JSArcConfiguration</returntype>
             <parameter>
                 <name>size</name>
@@ -477,7 +510,9 @@ config: JSArcConfiguration</comment>
         </method>
         <method>
             <name>setArcWidthInPixel</name>
-            <comment></comment>
+            <comment>Sets the arc width in pixel.
+mStrokeWidth: the m stroke width
+Return type: @return:the JS arc configuration</comment>
             <returntype>com.salvadorjhai.widgets.JSArcConfiguration</returntype>
             <parameter>
                 <name>mStrokeWidth</name>
@@ -486,7 +521,9 @@ config: JSArcConfiguration</comment>
         </method>
         <method>
             <name>setLoaderStyle</name>
-            <comment></comment>
+            <comment>Sets the loader style.
+mLoaderStyle: the m loader style
+Return type: @return:the JS arc configuration</comment>
             <returntype>com.salvadorjhai.widgets.JSArcConfiguration</returntype>
             <parameter>
                 <name>mLoaderStyle</name>
@@ -495,7 +532,9 @@ config: JSArcConfiguration</comment>
         </method>
         <method>
             <name>setTextColor</name>
-            <comment></comment>
+            <comment>Sets the text color.
+mTextColor: the m text color
+Return type: @return:the JS arc configuration</comment>
             <returntype>com.salvadorjhai.widgets.JSArcConfiguration</returntype>
             <parameter>
                 <name>mTextColor</name>
@@ -504,7 +543,9 @@ config: JSArcConfiguration</comment>
         </method>
         <method>
             <name>setAnimationSpeed</name>
-            <comment></comment>
+            <comment>Sets the animation speed.
+mAnimationSpeed: the m animation speed
+Return type: @return:the JS arc configuration</comment>
             <returntype>com.salvadorjhai.widgets.JSArcConfiguration</returntype>
             <parameter>
                 <name>mAnimationSpeed</name>
@@ -517,17 +558,32 @@ config: JSArcConfiguration</comment>
             <returntype>boolean</returntype>
         </method>
         <field>
+            <name>ANIMATION_SPEED_FAST</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIMATION_SPEED_SLOW</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
             <name>STYLE_COMPLETE_ARC</name>
+            <comment>The style complete arc.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIMATION_SPEED_MEDIUM</name>
             <comment></comment>
             <returntype>int</returntype>
         </field>
         <field>
             <name>STYLE_SIMPLE_ARC</name>
-            <comment></comment>
+            <comment>The style simple arc.</comment>
             <returntype>int</returntype>
         </field>
     </class>
-    <version>1.0</version>
+    <version>1.1</version>
     <author>salvadorjhai</author>
     <dependsOn>JSSimpleArcLoader.aar</dependsOn>
 </root>
